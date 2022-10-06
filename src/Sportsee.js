@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './css/normalize.css';
+import './css/styles.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import HorizontalNavigation from "./components/HorizontalNavigation";
+import VerticalNavigation from "./components/VerticalNavigation";
 
+/**
+ * Main file for the SportSee dashboard.
+ *
+ * @returns {*}
+ * @constructor
+ */
 function Sportsee() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="body-container">
+            <BrowserRouter>
+                <header>
+                    <HorizontalNavigation/>
+                </header>
+                <main>
+                    <aside>
+                        <VerticalNavigation/>
+                    </aside>
+                    <section>
+                        <h1>Bonjour Thomas</h1>
+                    </section>
+                </main>
+
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default Sportsee;

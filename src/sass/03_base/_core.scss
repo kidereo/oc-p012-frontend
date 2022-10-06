@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-family: $font-primary;
+}
+
+main {
+  display: flex;
+}
+
+html, body {
+  height: 100%;
+}

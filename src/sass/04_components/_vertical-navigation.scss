@@ -1,0 +1,36 @@
+.vertical-navigation {
+  display: flex;
+  flex-direction: column;
+  background-color: $colour-background-navigation;
+  width: 100px;
+  height: 690px;
+  justify-content: space-around;
+  align-items: center;
+
+  &-images {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-image {
+    margin: 10px;
+
+    &:hover {
+      filter: drop-shadow(0 0 5px white);
+    }
+  }
+
+  &-copyright {
+    color: $colour-font-navigation;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    font-size: 12px;
+    font-weight: 500;
+    width: 150px;
+    text-align: right;
+
+    &:hover {
+      filter: drop-shadow(0 0 5px white);
+    }
+  }
+}

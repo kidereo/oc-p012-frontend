@@ -6,7 +6,7 @@ Développeur d'application - JavaScript React
 
 ## Main packages
 
-This project was bootstrapped with [Create React Sportsee](https://github.com/facebook/create-react-app).\
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 Routing by [React Router](https://reactrouter.com/en/main).\
 Charts by [Recharts](https://recharts.org/en-US/).\
 Typechecking with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html).

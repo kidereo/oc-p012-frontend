@@ -4,11 +4,13 @@
 ## Path 
 Développeur d'application - JavaScript React
 
-## About React and React Router
+## Main packages
 
 This project was bootstrapped with [Create React Sportsee](https://github.com/facebook/create-react-app).\
 Routing by [React Router](https://reactrouter.com/en/main).\
-Charts by [Recharts](https://recharts.org/en-US/).
+Charts by [Recharts](https://recharts.org/en-US/).\
+Typechecking with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html).
+
 
 ## Prerequisites
 

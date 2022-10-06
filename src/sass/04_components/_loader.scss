@@ -1,0 +1,16 @@
+.loader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-code {
+    font-weight: 800;
+    font-size: 100px;
+    margin-top: 200px;
+  }
+
+  &-message {
+    font-weight: 500;
+    font-size: 24px;
+  }
+}

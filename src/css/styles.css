@@ -8,6 +8,8 @@ main { display: flex; }
 
 html, body { height: 100%; }
 
+section { width: 100%; }
+
 .horizontal-navigation { height: 90px; display: flex; padding: 0 80px 0 20px; flex-direction: row; align-items: center; justify-content: space-between; background-color: #020203; filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); }
 
 .horizontal-navigation-image { height: 60px; }
@@ -29,3 +31,15 @@ html, body { height: 100%; }
 .vertical-navigation-copyright { color: white; text-decoration: none; transform: rotate(-90deg); font-size: 12px; font-weight: 500; width: 150px; text-align: right; }
 
 .vertical-navigation-copyright:hover { filter: drop-shadow(0 0 5px white); }
+
+.error { display: flex; align-items: center; flex-direction: column; color: #ff0101; }
+
+.error-code { font-weight: 800; font-size: 100px; margin-top: 200px; }
+
+.error-message { font-weight: 500; font-size: 24px; }
+
+.loader { display: flex; align-items: center; flex-direction: column; }
+
+.loader-code { font-weight: 800; font-size: 100px; margin-top: 200px; }
+
+.loader-message { font-weight: 500; font-size: 24px; }

@@ -1,4 +1,5 @@
 import React from "react";
+import * as PropTypes from 'prop-types';
 
 /**
  * Component to render key data stats on the dashboard.
@@ -22,5 +23,17 @@ function KeydataCard({image, count, unit, title}) {
         </div>
     );
 }
+
+/**
+ * Typechecking with PropTypes.
+ *
+ * @type {{image: Requireable<string>, unit: Requireable<string>, count: Requireable<number>, title: Requireable<string>}}
+ */
+KeydataCard.propTypes = {
+    image: PropTypes.string,
+    count: PropTypes.number,
+    unit: PropTypes.string,
+    title: PropTypes.string,
+};
 
 export default KeydataCard;

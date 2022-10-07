@@ -1,5 +1,5 @@
 /**
- * Mapping class for the User model.
+ * Main class for the User model.
  */
 class User {
     constructor(

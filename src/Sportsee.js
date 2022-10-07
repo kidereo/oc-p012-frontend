@@ -8,7 +8,7 @@ import Dashboard from "./components/Dashboard";
 import Error from "./components/Error";
 
 /**
- * Main file for the SportSee dashboard.
+ * Structure and routes for the SportSee dashboard.
  *
  * @returns {*}
  * @constructor

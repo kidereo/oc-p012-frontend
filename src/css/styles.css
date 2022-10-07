@@ -62,6 +62,6 @@ h1, h2, h3, p { margin: 0; }
 
 .dashboard-graphs-keydata-card-image { margin-right: 20px; }
 
-.dashboard-graphs-keydata-card-text p { font-weight: 700; font-size: 20px; }
+.dashboard-graphs-keydata-card-text p { font-weight: 700; font-size: 20px; margin-bottom: 5px; }
 
 .dashboard-graphs-keydata-card-text h2 { font-weight: 500; font-size: 14px; }

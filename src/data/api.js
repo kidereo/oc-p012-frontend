@@ -20,9 +20,12 @@ async function retrieveUserInfo(id) {
 async function buildEndpoint(id, endpoint) {
     try {
         const baseUrl = "http://localhost:3003/user";
-        const response = await fetch(`${baseUrl}/${id}/${endpoint}`);
+        const response = await fetch(`${baseUrl}/${id}/${endpoint}`)
+            .then(response => response.json());
+        return response.data;
+        /*const response = await fetch(`${baseUrl}/${id}/${endpoint}`);
         const dataDump = await response.json();
-        return dataDump.data;
+        return dataDump.data;*/
     } catch (error) {
         console.log(error);
     }

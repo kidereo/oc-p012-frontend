@@ -1,3 +1,5 @@
+import * as Constants from "../resources/Constants";
+
 /**
  * Retrieve information from a user.
  * This endpoint includes the user id, user information (first name, last name and age),
@@ -19,8 +21,7 @@ async function retrieveUserInfo(id) {
  */
 async function buildEndpoint(id, endpoint) {
     try {
-        const baseUrl = "http://localhost:3003/user";
-        const response = await fetch(`${baseUrl}/${id}/${endpoint}`)
+        const response = await fetch(`${Constants.BASE_URL}/${id}/${endpoint}`)
             .then(response => response.json());
         return response.data;
         /*const response = await fetch(`${baseUrl}/${id}/${endpoint}`);

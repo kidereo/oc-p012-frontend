@@ -5,11 +5,17 @@ class User {
     constructor(
         firstName,
         lastName,
-        age
+        calorieCount,
+        proteinCount,
+        carbohydrateCount,
+        lipidCount
     ) {
         this._firstName = firstName;
         this._lastName = lastName;
-        this._age = age;
+        this._calorieCount = calorieCount;
+        this._proteinCount = proteinCount;
+        this._carbohydrateCount = carbohydrateCount;
+        this._lipidCount = lipidCount;
     }
 
     get firstName() {
@@ -20,8 +26,20 @@ class User {
         return this._lastName;
     }
 
-    get age() {
-        return this._age;
+    get calorieCount() {
+        return this._calorieCount;
+    }
+
+    get proteinCount() {
+        return this._proteinCount;
+    }
+
+    get carbohydrateCount() {
+        return this._carbohydrateCount;
+    }
+
+    get lipidCount() {
+        return this._lipidCount;
     }
 }
 

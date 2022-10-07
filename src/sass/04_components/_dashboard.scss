@@ -1,0 +1,62 @@
+.dashboard {
+  padding: 40px;
+
+  &-greeting {
+    h1 {
+      font-weight: 500;
+      font-size: 48px;
+    }
+
+    span {
+      color: $colour-font-primary;
+    }
+
+    p {
+      padding-top: 20px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+
+  &-graphs {
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    &-charts {
+      background-color: $colour-chart-background;
+      height: 100%;
+      width: 70%;
+    }
+
+    &-keydata {
+      &-card {
+        display: flex;
+        align-items: center;
+        background-color: $colour-chart-background;
+        margin-bottom: 20px;
+        padding: 20px 30px 20px 30px;
+        border-radius: 5px;
+
+        &-image {
+          margin-right: 20px;
+        }
+
+        &-text {
+          p {
+            font-weight: 700;
+            font-size: 20px;
+          }
+
+          h2 {
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+}

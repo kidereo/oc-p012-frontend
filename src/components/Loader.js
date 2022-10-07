@@ -9,8 +9,9 @@ import React from "react";
 function Loader() {
     return (
         <div className="loader">
-            <h1 className="loader-code">Loading...</h1>
-            <p className="loader-message">Good things come to those who wait!</p>
+            <h1 className="loader-code">102 Processing</h1>
+            <p className="loader-message">The server has received and is processing the request, but no response is
+                available yet,</p>
         </div>
     );
 }

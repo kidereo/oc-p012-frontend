@@ -21,10 +21,10 @@ function DashboardGreeting({name, greeting}) {
 /**
  * Typechecking with PropTypes.
  *
- * @type {{greeting: Requireable<string>, name: Requireable<string>}}
+ * @type {{greeting: Requireable<string>, name: Validator<NonNullable<string>>}}
  */
 DashboardGreeting.propTypes = {
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     greeting: PropTypes.string,
 };
 

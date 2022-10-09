@@ -1,6 +1,6 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
-import Logo from "../assets/logo-sportsee.svg";
+import {NavLink} from "react-router-dom/dist/index";
+import Logo from "../../assets/logo-sportsee.svg";
 
 /**
  * Horizontal navigation component displayed in the <header>.

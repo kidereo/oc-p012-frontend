@@ -1,9 +1,9 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
-import Yoga from "../assets/icon-yoga.svg";
-import Swim from "../assets/icon-swim.svg";
-import Cycle from "../assets/icon-cycle.svg";
-import Weight from "../assets/icon-weight.svg";
+import {NavLink} from "react-router-dom/dist/index";
+import Yoga from "../../assets/icon-yoga.svg";
+import Swim from "../../assets/icon-swim.svg";
+import Cycle from "../../assets/icon-cycle.svg";
+import Weight from "../../assets/icon-weight.svg";
 
 /**
  * Vertical navigation component displayed in the <aside>.

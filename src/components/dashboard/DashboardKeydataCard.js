@@ -11,7 +11,7 @@ import * as PropTypes from 'prop-types';
  * @returns {*}
  * @constructor
  */
-function KeydataCard({image, count, unit, title}) {
+function DashboardKeydataCard({image, count, unit, title}) {
     return (
         <div className="dashboard-graphs-keydata-card">
             <img src={image} alt={`${title} count`}
@@ -29,11 +29,11 @@ function KeydataCard({image, count, unit, title}) {
  *
  * @type {{image: Requireable<string>, unit: Requireable<string>, count: Requireable<number>, title: Requireable<string>}}
  */
-KeydataCard.propTypes = {
-    image: PropTypes.string,
-    count: PropTypes.number,
-    unit: PropTypes.string,
-    title: PropTypes.string,
+DashboardKeydataCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    count: PropTypes.number.isRequired,
+    unit: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };
 
-export default KeydataCard;
+export default DashboardKeydataCard;

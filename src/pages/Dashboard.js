@@ -1,19 +1,19 @@
 import React from "react";
-import './css/normalize.css';
-import './css/styles.css';
+import '../css/normalize.css';
+import '../css/styles.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import HorizontalNavigation from "./components/HorizontalNavigation";
-import VerticalNavigation from "./components/VerticalNavigation";
-import Dashboard from "./components/Dashboard";
-import Error from "./components/Error";
+import HorizontalNavigation from "../components/navigation/HorizontalNavigation";
+import VerticalNavigation from "../components/navigation/VerticalNavigation";
+import DashboardSection from "../components/dashboard/DashboardSection";
+import Error from "../components/Error";
 
 /**
- * Structure and routes for the SportSee dashboard.
+ * Main page structure and routes for the SportSee dashboard.
  *
  * @returns {*}
  * @constructor
  */
-function Sportsee() {
+function Dashboard() {
     return (
         <div className="body-container">
             <BrowserRouter>
@@ -26,7 +26,7 @@ function Sportsee() {
                     </aside>
                     <section>
                         <Routes>
-                            <Route path="/user/:id" element={<Dashboard/>}/>
+                            <Route path="/user/:id" element={<DashboardSection/>}/>
                             <Route path="*" element={<Error/>}/>
                         </Routes>
                     </section>
@@ -36,4 +36,4 @@ function Sportsee() {
     );
 }
 
-export default Sportsee;
+export default Dashboard;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom/dist/index";
-import {retrieveUserInfo} from "../../data/api";
+import {retrieveUserInfo, retrieveUserDailyActivity} from "../../data/api";
 import User from "../../resources/User";
 import Error from "../Error";
 import Loader from "../Loader";
@@ -10,6 +10,7 @@ import IconCalories from "../../assets/icon-calories.svg";
 import IconProtein from "../../assets/icon-protein.svg";
 import IconCarbs from "../../assets/icon-carbs.svg";
 import IconFats from "../../assets/icon-fats.svg";
+import ActivityChart from "./charts/ActivityChart";
 
 /**
  * Principal component for the Dashboard.js <section>.
@@ -19,7 +20,8 @@ import IconFats from "../../assets/icon-fats.svg";
  */
 function DashboardSection() {
     let {id} = useParams();
-    let [currentUserById, setCurrentUserById] = useState({});
+    let [currentUserId, setCurrentUserId] = useState({});
+    let [currentUserDailyActivity, setCurrentUserDailyActivity] = useState({});
     let [isLoading, setLoading] = useState(true);
 
     /**
@@ -29,7 +31,9 @@ function DashboardSection() {
     useEffect(() => {
         async function accessAPI(id) {
             let currentUserInfo = await retrieveUserInfo(id);
-            setCurrentUserById(currentUserInfo);
+            let currentUserDailyActivity = await retrieveUserDailyActivity(id);
+            setCurrentUserId(currentUserInfo);
+            setCurrentUserDailyActivity(currentUserDailyActivity);
             setLoading(false);
         }
 
@@ -42,12 +46,12 @@ function DashboardSection() {
      * @type {boolean|User}
      */
     let currentUser = !isLoading && new User(
-        currentUserById?.userInfos.firstName,
-        currentUserById?.userInfos.lastName,
-        currentUserById?.keyData.calorieCount,
-        currentUserById?.keyData.proteinCount,
-        currentUserById?.keyData.carbohydrateCount,
-        currentUserById?.keyData.lipidCount,
+        currentUserId?.userInfos.firstName,
+        currentUserId?.userInfos.lastName,
+        currentUserId?.keyData.calorieCount,
+        currentUserId?.keyData.proteinCount,
+        currentUserId?.keyData.carbohydrateCount,
+        currentUserId?.keyData.lipidCount,
     );
 
     /**
@@ -70,7 +74,9 @@ function DashboardSection() {
 
                         <div className="dashboard-graphs">
                             <div className="dashboard-graphs-charts">
-                                <h2>Dashboard charts will be here</h2>
+                                <div className="dashboard-graphs-charts-activity"><ActivityChart
+                                    userDailyActivity={currentUserDailyActivity}/></div>
+                                <div className="dashboard-graphs-charts-cards"><h2>Three cards here</h2></div>
                             </div>
                             <div className="dashboard-graphs-keydata">
                                 <DashboardKeydataCard image={IconCalories}

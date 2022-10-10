@@ -1,45 +1,50 @@
-/**
- * Main class for the User model.
- */
 class User {
-    constructor(
-        firstName,
-        lastName,
-        calorieCount,
-        proteinCount,
-        carbohydrateCount,
-        lipidCount
-    ) {
-        this._firstName = firstName;
-        this._lastName = lastName;
-        this._calorieCount = calorieCount;
-        this._proteinCount = proteinCount;
-        this._carbohydrateCount = carbohydrateCount;
-        this._lipidCount = lipidCount;
+    /**
+     * Main class for the User model.
+     *
+     * @param firstName
+     * @param lastName
+     * @param calorieCount
+     * @param proteinCount
+     * @param carbohydrateCount
+     * @param lipidCount
+     */
+    constructor(firstName, lastName, calorieCount, proteinCount, carbohydrateCount, lipidCount) {
+        this.name = firstName;
+        this.surname = lastName;
+        this.calories = calorieCount;
+        this.proteins = proteinCount;
+        this.carbs = carbohydrateCount;
+        this.fats = lipidCount;
     }
 
+    /**
+     * Getters for user attributes.
+     *
+     * @returns {*}
+     */
     get firstName() {
-        return this._firstName;
+        return this.name;
     }
 
     get lastName() {
-        return this._lastName;
+        return this.surname;
     }
 
     get calorieCount() {
-        return this._calorieCount;
+        return this.calories;
     }
 
     get proteinCount() {
-        return this._proteinCount;
+        return this.proteins;
     }
 
     get carbohydrateCount() {
-        return this._carbohydrateCount;
+        return this.carbs;
     }
 
     get lipidCount() {
-        return this._lipidCount;
+        return this.fats;
     }
 }
 

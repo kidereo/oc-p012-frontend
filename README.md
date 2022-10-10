@@ -34,5 +34,18 @@ Typechecking with [PropTypes](https://reactjs.org/docs/typechecking-with-proptyp
 4. If all goes well, you should receive the console message `You can now view the project in the browser` and the dashboard will become available on `http://localhost:3000`. 
 5. If anything goes wrong, start again.
 
-## Warning
-Currently just two users have been mocked. They have userId 12 and 18 respectively.
+## Endpoints
+
+### Available endpoints
+This project includes four endpoints:
+1. `http://localhost:3003/user/${userId}` - retrieves information from a user. This endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+2. `http://localhost:3003/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
+3. `http://localhost:3003/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
+4. `http://localhost:3003/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
+
+### Warning
+Currently just two users have been mocked with ids `12` and `18`.
+
+### Examples of queries
+- `http://localhost:3003/user/12/performance` - retrieves the performance of the user with id `12`.
+- `http://localhost:3003/user/18` - retrieves main information of the user with id `18`.

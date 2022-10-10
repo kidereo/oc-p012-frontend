@@ -56,7 +56,9 @@ h1, h2, h3, p { margin: 0; }
 
 .dashboard-graphs { height: 450px; display: flex; flex-direction: row; justify-content: space-between; margin-top: 40px; }
 
-.dashboard-graphs-charts { background-color: #fbfbfb; height: 100%; width: 70%; }
+.dashboard-graphs-charts { height: 100%; width: 70%; }
+
+.dashboard-graphs-charts-activity { background-color: #fbfbfb; border-radius: 5px; }
 
 .dashboard-graphs-keydata-card { display: flex; align-items: center; background-color: #fbfbfb; margin-bottom: 20px; padding: 20px 30px 20px 30px; border-radius: 5px; }
 

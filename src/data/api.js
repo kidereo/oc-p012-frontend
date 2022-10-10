@@ -1,7 +1,7 @@
 import * as Constants from "../resources/Constants";
 
 /**
- * Retrieve information from a user.
+ * Retrieve information of a given user.
  * This endpoint includes the user id, user information (first name, last name and age),
  * the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
  *
@@ -10,6 +10,17 @@ import * as Constants from "../resources/Constants";
  */
 async function retrieveUserInfo(id) {
     return await buildEndpoint(id, "");
+}
+
+/**
+ * Retrieve daily activity of a given user.
+ * This endpoint retrieves user sessions day by day with kilograms and calories.
+ *
+ * @param id
+ * @returns {Promise<*>}
+ */
+async function retrieveUserDailyActivity(id) {
+    return await buildEndpoint(id, "activity");
 }
 
 /**
@@ -32,4 +43,4 @@ async function buildEndpoint(id, endpoint) {
     }
 }
 
-export {retrieveUserInfo};
+export {retrieveUserInfo, retrieveUserDailyActivity};

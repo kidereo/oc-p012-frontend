@@ -26,9 +26,13 @@
     margin-top: 40px;
 
     &-charts {
-      background-color: $colour-chart-background;
       height: 100%;
       width: 70%;
+
+      &-activity {
+        background-color: $colour-chart-background;
+        border-radius: 5px;
+      }
     }
 
     &-keydata {

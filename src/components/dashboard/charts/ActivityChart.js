@@ -1,10 +1,10 @@
 import React from "react";
-import {BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import DailyActivity from "../../../resources/DailyActivity";
 import * as PropTypes from 'prop-types';
 
 /**
- * Component for the daily activit chart..
+ * Component for the daily activity chart.
  *
  * @param userDailyActivity
  * @returns {*}
@@ -20,9 +20,9 @@ function ActivityChart({userDailyActivity}) {
                 data={currentUserActivity.retrieveDailyActivity}
                 margin={{
                     top: 15,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
+                    right: 25,
+                    left: 0,
+                    bottom: 15,
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3"/>

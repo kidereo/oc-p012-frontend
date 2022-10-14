@@ -69,32 +69,40 @@ function DashboardSection() {
                     <>
                         <div className="dashboard-greeting">
                             <DashboardGreeting name={currentUser.firstName}
-                                               greeting="Félicitation ! Vous avez explosé vos objectifs hier 👏"/>
+                                               greeting="Félicitation ! Vous avez explosé vos objectifs hier 👏"
+                            />
                         </div>
 
                         <div className="dashboard-graphs">
                             <div className="dashboard-graphs-charts">
-                                <div className="dashboard-graphs-charts-activity"><ActivityChart
-                                    userDailyActivity={currentUserDailyActivity}/></div>
-                                <div className="dashboard-graphs-charts-cards"><h2>Three cards here</h2></div>
+                                <div className="dashboard-graphs-charts-activity">
+                                    <h2>Graph title</h2>
+                                    <ActivityChart userDailyActivity={currentUserDailyActivity}/></div>
+                                <div className="dashboard-graphs-charts-cards">
+                                    <h2>Three cards here</h2>
+                                </div>
                             </div>
                             <div className="dashboard-graphs-keydata">
                                 <DashboardKeydataCard image={IconCalories}
                                                       count={currentUser.calorieCount}
                                                       unit="kCal"
-                                                      title="Calories"/>
+                                                      title="Calories"
+                                />
                                 <DashboardKeydataCard image={IconProtein}
                                                       count={currentUser.proteinCount}
                                                       unit="g"
-                                                      title="Proteines"/>
+                                                      title="Proteines"
+                                />
                                 <DashboardKeydataCard image={IconCarbs}
                                                       count={currentUser.carbohydrateCount}
                                                       unit="g"
-                                                      title="Glucides"/>
+                                                      title="Glucides"
+                                />
                                 <DashboardKeydataCard image={IconFats}
                                                       count={currentUser.lipidCount}
                                                       unit="g"
-                                                      title="Lipides"/>
+                                                      title="Lipides"
+                                />
                             </div>
                         </div>
                     </>

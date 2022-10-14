@@ -20,18 +20,44 @@ function ActivityChart({userDailyActivity}) {
                 data={currentUserActivity.retrieveDailyActivity}
                 margin={{
                     top: 15,
-                    right: 25,
-                    left: 0,
+                    right: 0,
+                    left: 25,
                     bottom: 15,
                 }}
+                barGap={8}
             >
-                <CartesianGrid strokeDasharray="3 3"/>
-                <XAxis dataKey="label"/>
-                <YAxis/>
+                <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+                <XAxis dataKey="label"
+                       tickMargin={15}
+                       tickLine={false}
+                       axisLine={{stroke: "rgba(222, 222, 222, 1)"}}
+                />
+                <YAxis
+                    yAxisId="burn"
+                    orientation="left"
+                    hide={true}
+                />
+                <YAxis
+                    yAxisId="weight"
+                    orientation="right"
+                    axisLine={false}
+                    tickLine={false}
+                    domain={["dataMin - 2", "dataMax + 2"]}
+                />
                 <Tooltip/>
                 <Legend/>
-                <Bar dataKey="kilogram" fill="#282D30"/>
-                <Bar dataKey="calories" fill="#E60000"/>
+                <Bar yAxisId="weight"
+                     dataKey="kilogram"
+                     fill="#282D30"
+                     radius={[3, 3, 0, 0]}
+                     barSize={7}
+                />
+                <Bar yAxisId="burn"
+                     dataKey="calories"
+                     fill="#E60000"
+                     radius={[3, 3, 0, 0]}
+                     barSize={7}
+                />
             </BarChart>
         </>
     );

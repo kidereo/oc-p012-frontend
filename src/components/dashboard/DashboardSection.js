@@ -76,8 +76,10 @@ function DashboardSection() {
                         <div className="dashboard-graphs">
                             <div className="dashboard-graphs-charts">
                                 <div className="dashboard-graphs-charts-activity">
-                                    <h2>Graph title</h2>
-                                    <ActivityChart userDailyActivity={currentUserDailyActivity}/></div>
+                                    <ActivityChart title="Activité quotidienne"
+                                                   userDailyActivity={currentUserDailyActivity}
+                                    />
+                                </div>
                                 <div className="dashboard-graphs-charts-cards">
                                     <h2>Three cards here</h2>
                                 </div>

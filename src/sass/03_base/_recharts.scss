@@ -1,0 +1,27 @@
+/*Activity Chart Classes*/
+.recharts-legend-wrapper {
+  li {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+  margin-top: 0;
+
+  &-activity {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    font-size: 7px;
+    font-weight: 500;
+    height: 60px;
+    background-color: $colour-background-primary;
+    color: white;
+  }
+}
+
+

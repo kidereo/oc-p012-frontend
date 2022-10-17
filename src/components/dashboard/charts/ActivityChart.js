@@ -65,10 +65,11 @@ function ActivityChart({title, userDailyActivity}) {
                         "dataMax + 2"
                     ]}
                 />
-                <Tooltip content={<CustomTooltip/>}
+                <Tooltip content={<CustomisedTooltip/>}
                          offset={50}
                          cursor={{
                              fill: "rgba(196, 196, 196, 0.5)",
+                             //width: 55,
                          }}
                 />
                 <Legend
@@ -117,7 +118,7 @@ function ActivityChart({title, userDailyActivity}) {
  * @returns {*}
  * @constructor
  */
-function CustomTooltip({active, payload}) {
+function CustomisedTooltip({active, payload}) {
     if (active) {
         return (
             <div className="recharts-tooltip-wrapper-activity">
@@ -142,7 +143,7 @@ ActivityChart.propTypes = {
  *
  * @type {{payload: Requireable<any[]>, active: Requireable<boolean>}}
  */
-CustomTooltip.propTypes = {
+CustomisedTooltip.propTypes = {
     active: PropTypes.bool,
     payload: PropTypes.array
 };

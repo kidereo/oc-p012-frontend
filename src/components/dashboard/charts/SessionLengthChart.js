@@ -30,21 +30,20 @@ export default function SessionLengthChart({title, userSessionLength}) {
             >
                 <XAxis dataKey="label"
                        stroke="rgba(255, 255, 255, 0.5)"
-                       axisLine={false}
-                       dy={10}
+                       tickMargin={10}
                        tickLine={false}
                        tick={{
                            fontSize: 12,
-                           fontWeight: 500,
+                           fontWeight: 500
                        }}
+                       axisLine={false}
                 />
                 <YAxis
                     domain={[0, "dataMax + 20"]}
                     hide={true}
                 />
-
                 <Tooltip content={<CustomisedTooltip/>}
-                         offset={5}
+                         offset={10}
                          cursor={{
                              stroke: "rgba(255,255,255, 0.5)",
                              strokeWidth: 0.5,

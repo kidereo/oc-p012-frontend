@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca64d61-5d87-4c5b-9a07-85ec1e035fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/SessionLength.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/DailyActivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/DailyActivity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/03_base/_recharts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/03_base/_recharts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/04_components/_dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/04_components/_dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="68" column="67" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="67" />
+            <state relative-caret-position="322">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -37,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardSection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+            <state relative-caret-position="34">
+              <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -49,29 +52,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sass/04_components/_dashboard.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sass/03_base/_recharts.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="691">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js">
+        <entry file="file://$PROJECT_DIR$/src/sass/03_base/_recharts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="149" column="2" lean-forward="true" selection-start-line="141" selection-end-line="149" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="685">
+              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -121,12 +112,12 @@
         <option value="$PROJECT_DIR$/src/data/api.js" />
         <option value="$PROJECT_DIR$/src/resources/DailyActivity.js" />
         <option value="$PROJECT_DIR$/src/resources/User.js" />
-        <option value="$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js" />
         <option value="$PROJECT_DIR$/src/resources/SessionLength.js" />
         <option value="$PROJECT_DIR$/src/components/dashboard/DashboardSection.js" />
         <option value="$PROJECT_DIR$/src/sass/04_components/_dashboard.scss" />
-        <option value="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" />
         <option value="$PROJECT_DIR$/src/sass/03_base/_recharts.scss" />
+        <option value="$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js" />
+        <option value="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" />
       </list>
     </option>
   </component>
@@ -285,7 +276,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664889237759</updated>
-      <workItem from="1664889239034" duration="127762000" />
+      <workItem from="1664889239034" duration="132529000" />
     </task>
     <task id="LOCAL-00001" summary="Project structured and packages installed.">
       <created>1664900545171</created>
@@ -392,11 +383,25 @@
       <option name="project" value="LOCAL" />
       <updated>1666039251866</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added and styled session length chart through Recharts props and CSS.">
+      <created>1666116966521</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666116966521</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added and styled session length chart through Recharts props and CSS.">
+      <created>1666122262545</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1666122262545</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127762000" />
+    <option name="totallyTimeSpent" value="132529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1285" height="1283" extended-state="0" />
@@ -442,7 +447,8 @@
     <MESSAGE value="First cut at the daily activity chart with Recharts." />
     <MESSAGE value="Initial styling of the daily activity chart through Recharts props." />
     <MESSAGE value="Styled daily activity chart through Recharts props and CSS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Styled daily activity chart through Recharts props and CSS." />
+    <MESSAGE value="Added and styled session length chart through Recharts props and CSS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and styled session length chart through Recharts props and CSS." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.css">
@@ -630,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/03_base/_core.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -759,47 +758,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/04_components/_dashboard.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="149" column="2" lean-forward="true" selection-start-line="141" selection-end-line="149" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="68" column="67" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardSection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        <state relative-caret-position="34">
+          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/03_base/_core.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/03_base/_recharts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="685">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/04_components/_dashboard.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

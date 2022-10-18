@@ -1,4 +1,4 @@
-class User {
+export default class User {
     /**
      * Main class for the User model.
      *
@@ -47,5 +47,3 @@ class User {
         return this.fats;
     }
 }
-
-export default User;

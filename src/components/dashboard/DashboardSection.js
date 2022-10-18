@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom/dist/index";
-import {retrieveUserInfo, retrieveUserDailyActivity} from "../../data/api";
+import {retrieveUserInfo, retrieveUserDailyActivity, retrieveUserAverageSessionLength} from "../../data/api";
 import User from "../../resources/User";
 import Error from "../Error";
 import Loader from "../Loader";
@@ -11,6 +11,7 @@ import IconProtein from "../../assets/icon-protein.svg";
 import IconCarbs from "../../assets/icon-carbs.svg";
 import IconFats from "../../assets/icon-fats.svg";
 import ActivityChart from "./charts/ActivityChart";
+import SessionLengthChart from "./charts/SessionLengthChart";
 
 /**
  * Principal component for the Dashboard.js <section>.
@@ -22,6 +23,7 @@ function DashboardSection() {
     let {id} = useParams();
     let [currentUserId, setCurrentUserId] = useState({});
     let [currentUserDailyActivity, setCurrentUserDailyActivity] = useState({});
+    let [currentUserAverageSessionLength, setCurrentUserAverageSessionLength] = useState({});
     let [isLoading, setLoading] = useState(true);
 
     /**
@@ -32,8 +34,10 @@ function DashboardSection() {
         async function accessAPI(id) {
             let currentUserInfo = await retrieveUserInfo(id);
             let currentUserDailyActivity = await retrieveUserDailyActivity(id);
+            let currentUserAverageSessionLength = await retrieveUserAverageSessionLength(id);
             setCurrentUserId(currentUserInfo);
             setCurrentUserDailyActivity(currentUserDailyActivity);
+            setCurrentUserAverageSessionLength(currentUserAverageSessionLength);
             setLoading(false);
         }
 
@@ -79,9 +83,12 @@ function DashboardSection() {
                                     <ActivityChart title="Activité quotidienne"
                                                    userDailyActivity={currentUserDailyActivity}
                                     />
+
                                 </div>
                                 <div className="dashboard-graphs-charts-cards">
-                                    <h2>Three cards here</h2>
+                                    <SessionLengthChart title="Durée moyenne des sessions"
+                                                        userSessionLength = {currentUserAverageSessionLength}
+                                    />
                                 </div>
                             </div>
                             <div className="dashboard-graphs-keydata">

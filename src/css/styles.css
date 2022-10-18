@@ -19,6 +19,8 @@ h1, h2, h3, p { margin: 0; }
 
 .recharts-tooltip-wrapper-activity { display: flex; justify-content: space-evenly; flex-direction: column; align-items: center; width: 40px; font-size: 7px; font-weight: 500; height: 60px; background-color: red; color: white; }
 
+.recharts-tooltip-wrapper-session_length { display: flex; align-items: center; justify-content: center; width: 40px; height: 25px; font-size: 8px; font-weight: 500; color: black; background-color: white; }
+
 .horizontal-navigation { height: 90px; display: flex; padding: 0 80px 0 20px; flex-direction: row; align-items: center; justify-content: space-between; background-color: #020203; filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); }
 
 .horizontal-navigation-image { height: 60px; }
@@ -68,6 +70,12 @@ h1, h2, h3, p { margin: 0; }
 .dashboard-graphs-charts-activity { background-color: #fbfbfb; border-radius: 5px; }
 
 .dashboard-graphs-charts-activity h2 { font-size: 15px; font-weight: 500; padding: 20px 0 0 20px; }
+
+.dashboard-graphs-charts-cards { margin-top: 20px; }
+
+.dashboard-graphs-charts-cards-session_length { border-radius: 5px; background-color: red; display: flex; flex-direction: column; width: 30%; height: 180px; }
+
+.dashboard-graphs-charts-cards-session_length h2 { font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, 0.5); padding: 20px 50px 0 20px; }
 
 .dashboard-graphs-keydata-card { display: flex; align-items: center; background-color: #fbfbfb; margin-bottom: 20px; padding: 20px 30px 20px 30px; border-radius: 5px; }
 

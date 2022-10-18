@@ -132,9 +132,10 @@ function CustomisedTooltip({active, payload}) {
 /**
  * Typechecking with PropTypes.
  *
- * @type {{userDailyActivity: Requireable<object>}}
+ * @type {{title: Requireable<string>, userDailyActivity: Requireable<object>}}
  */
 ActivityChart.propTypes = {
+    title: PropTypes.string,
     userDailyActivity: PropTypes.object
 };
 

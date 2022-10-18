@@ -39,6 +39,26 @@
           padding: 20px 0 0 20px;
         }
       }
+
+      &-cards {
+        margin-top: 20px;
+
+        &-session_length {
+          border-radius: 5px;
+          background-color: $colour-background-primary;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 180px;
+
+          h2 {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 20px 50px 0 20px;
+          }
+        }
+      }
     }
 
     &-keydata {

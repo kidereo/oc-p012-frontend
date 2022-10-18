@@ -1,4 +1,4 @@
-class DailyActivity {
+export default class DailyActivity {
     /**
      * Main class for the DailyActivity model.
      *
@@ -10,7 +10,7 @@ class DailyActivity {
                 /**
                  * Return just the day of the month (not the full date) with session data.
                  */
-                //labels: session.day,
+                //label: session.day,
                 label: new Date(session.day).getDate().toString(),
                 ...session
             }
@@ -26,5 +26,3 @@ class DailyActivity {
         return this.dailyActivity;
     }
 }
-
-export default DailyActivity;

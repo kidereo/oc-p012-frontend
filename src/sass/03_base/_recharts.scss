@@ -22,6 +22,19 @@
     background-color: $colour-background-primary;
     color: white;
   }
+
+  &-session_length {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 25px;
+    font-size: 8px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    background-color: white;
+
+  }
 }
 
 

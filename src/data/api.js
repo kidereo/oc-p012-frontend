@@ -24,6 +24,17 @@ async function retrieveUserDailyActivity(id) {
 }
 
 /**
+ * Retrieve average session duration of a given user.
+ * This endpoint retrieves average session duration of a user per day.
+ *
+ * @param id
+ * @returns {Promise<*>}
+ */
+async function retrieveUserAverageSessionLength(id) {
+    return await buildEndpoint(id, "average-sessions");
+}
+
+/**
  * Build up endpoint URL to retrieve data.
  *
  * @param id
@@ -43,4 +54,4 @@ async function buildEndpoint(id, endpoint) {
     }
 }
 
-export {retrieveUserInfo, retrieveUserDailyActivity};
+export {retrieveUserInfo, retrieveUserDailyActivity, retrieveUserAverageSessionLength};

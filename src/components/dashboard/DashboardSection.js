@@ -87,7 +87,13 @@ function DashboardSection() {
                                 </div>
                                 <div className="dashboard-graphs-charts-cards">
                                     <SessionLengthChart title="Durée moyenne des sessions"
-                                                        userSessionLength = {currentUserAverageSessionLength}
+                                                        userSessionLength={currentUserAverageSessionLength}
+                                    />
+                                    <SessionLengthChart title="Durée moyenne des sessions"
+                                                        userSessionLength={currentUserAverageSessionLength}
+                                    />
+                                    <SessionLengthChart title="Durée moyenne des sessions"
+                                                        userSessionLength={currentUserAverageSessionLength}
                                     />
                                 </div>
                             </div>

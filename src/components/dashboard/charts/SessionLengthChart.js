@@ -1,8 +1,16 @@
 import React from "react";
-import {LineChart, Line, XAxis, YAxis, Tooltip, Legend} from 'recharts';
+import {LineChart, Line, XAxis, YAxis, Tooltip} from 'recharts';
 import SessionLength from "../../../resources/SessionLength";
 import * as PropTypes from 'prop-types';
 
+/**
+ * Component for the average session length chart.
+ *
+ * @param title
+ * @param userSessionLength
+ * @returns {*}
+ * @constructor
+ */
 export default function SessionLengthChart({title, userSessionLength}) {
     let currentUserSessionLength = new SessionLength(userSessionLength);
     return (
@@ -37,6 +45,10 @@ export default function SessionLengthChart({title, userSessionLength}) {
 
                 <Tooltip content={<CustomisedTooltip/>}
                          offset={5}
+                         cursor={{
+                             stroke: "rgba(255,255,255, 0.5)",
+                             strokeWidth: 0.5,
+                         }}
                 />
                 <Line
                     type="monotone"
@@ -45,9 +57,10 @@ export default function SessionLengthChart({title, userSessionLength}) {
                     strokeWidth={2}
                     dot={false}
                     activeDot={{
-                        stroke: "rgba(255,255,255, 1)",
-                        strokeWidth: 1,
-                        r: 5,
+                        stroke: "rgba(255,255,255, 0.5)",
+                        strokeWidth: 3,
+                        r: 4,
+                        fill: "white"
                     }}
                 />
             </LineChart>

@@ -1,11 +1,13 @@
-/*Activity Chart Classes*/
+/*Recharts legend styling class*/
 .recharts-legend-wrapper {
   li {
     font-size: 14px;
     font-weight: 500;
+    padding-left: 30px;
   }
 }
 
+/*Recharts tooltip styling classes*/
 .recharts-tooltip-wrapper {
   outline: none;
   margin-top: 0;
@@ -33,7 +35,6 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
     background-color: white;
-
   }
 }
 

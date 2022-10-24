@@ -9,7 +9,7 @@ import * as Constants from "../resources/Constants";
  * @returns {Promise<*>}
  */
 async function retrieveUserInfo(id) {
-    return await buildEndpoint(id, "");
+    return await buildEndpoint(id, Constants.USER_INFO_ENDPOINT);
 }
 
 /**
@@ -20,7 +20,7 @@ async function retrieveUserInfo(id) {
  * @returns {Promise<*>}
  */
 async function retrieveUserDailyActivity(id) {
-    return await buildEndpoint(id, "activity");
+    return await buildEndpoint(id, Constants.USER_DAILY_ACTIVITY_ENDPOINT);
 }
 
 /**
@@ -31,7 +31,18 @@ async function retrieveUserDailyActivity(id) {
  * @returns {Promise<*>}
  */
 async function retrieveUserAverageSessionLength(id) {
-    return await buildEndpoint(id, "average-sessions");
+    return await buildEndpoint(id, Constants.USER_AVERAGE_SESSION_LENGTH_ENDPOINT);
+}
+
+/**
+ * Retrieve performance data of a given user.
+ * This endpoint retrieves a user's performance (energy, endurance, etc).
+ *
+ * @param id
+ * @returns {Promise<*>}
+ */
+async function retrieveUserPerformance(id) {
+    return await buildEndpoint(id, Constants.USER_PERFORMANCE_ENDPOINT);
 }
 
 /**
@@ -54,4 +65,4 @@ async function buildEndpoint(id, endpoint) {
     }
 }
 
-export {retrieveUserInfo, retrieveUserDailyActivity, retrieveUserAverageSessionLength};
+export {retrieveUserInfo, retrieveUserDailyActivity, retrieveUserAverageSessionLength, retrieveUserPerformance};

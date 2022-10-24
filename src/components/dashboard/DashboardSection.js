@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom/dist/index";
-import {retrieveUserInfo, retrieveUserDailyActivity, retrieveUserAverageSessionLength} from "../../data/api";
+import {
+    retrieveUserInfo,
+    retrieveUserDailyActivity,
+    retrieveUserAverageSessionLength,
+    retrieveUserPerformance
+} from "../../data/api";
 import User from "../../resources/User";
 import Error from "../Error";
 import Loader from "../Loader";
@@ -12,6 +17,7 @@ import IconCarbs from "../../assets/icon-carbs.svg";
 import IconFats from "../../assets/icon-fats.svg";
 import ActivityChart from "./charts/ActivityChart";
 import SessionLengthChart from "./charts/SessionLengthChart";
+import PerformanceChart from "./charts/PerformanceChart";
 
 /**
  * Principal component for the Dashboard.js <section>.
@@ -24,6 +30,7 @@ function DashboardSection() {
     let [currentUserId, setCurrentUserId] = useState({});
     let [currentUserDailyActivity, setCurrentUserDailyActivity] = useState({});
     let [currentUserAverageSessionLength, setCurrentUserAverageSessionLength] = useState({});
+    let [currentUserPerformance, setCurrentUserPerformance] = useState({});
     let [isLoading, setLoading] = useState(true);
 
     /**
@@ -35,9 +42,11 @@ function DashboardSection() {
             let currentUserInfo = await retrieveUserInfo(id);
             let currentUserDailyActivity = await retrieveUserDailyActivity(id);
             let currentUserAverageSessionLength = await retrieveUserAverageSessionLength(id);
+            let currentUserPerformance = await retrieveUserPerformance(id);
             setCurrentUserId(currentUserInfo);
             setCurrentUserDailyActivity(currentUserDailyActivity);
             setCurrentUserAverageSessionLength(currentUserAverageSessionLength);
+            setCurrentUserPerformance(currentUserPerformance);
             setLoading(false);
         }
 
@@ -89,8 +98,7 @@ function DashboardSection() {
                                     <SessionLengthChart title="Durée moyenne des sessions"
                                                         userSessionLength={currentUserAverageSessionLength}
                                     />
-                                    <SessionLengthChart title="Durée moyenne des sessions"
-                                                        userSessionLength={currentUserAverageSessionLength}
+                                    <PerformanceChart userPerformance={currentUserPerformance}
                                     />
                                     <SessionLengthChart title="Durée moyenne des sessions"
                                                         userSessionLength={currentUserAverageSessionLength}

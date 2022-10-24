@@ -78,6 +78,8 @@ h1, h2, h3, p { margin: 0; }
 
 .dashboard-graphs-charts-cards-session_length h2 { font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, 0.5); padding: 20px 50px 0 20px; }
 
+.dashboard-graphs-charts-cards-performance { border-radius: 5px; background-color: black; display: flex; align-items: center; justify-content: center; width: 31%; height: 180px; }
+
 .dashboard-graphs-keydata-card { display: flex; align-items: center; background-color: #fbfbfb; margin-bottom: 17px; padding: 25px 30px 25px 30px; border-radius: 5px; }
 
 .dashboard-graphs-keydata-card-image { margin-right: 20px; }

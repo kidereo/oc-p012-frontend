@@ -80,6 +80,18 @@ h1, h2, h3, p { margin: 0; }
 
 .dashboard-graphs-charts-cards-performance { border-radius: 5px; background-color: black; display: flex; align-items: center; justify-content: center; width: 31%; height: 180px; }
 
+.dashboard-graphs-charts-cards-score { border-radius: 5px; background-color: #fbfbfb; width: 31%; height: 180px; position: relative; }
+
+.dashboard-graphs-charts-cards-score h2 { font-size: 15px; font-weight: 500; color: #20253a; padding: 20px 50px 0 20px; }
+
+.dashboard-graphs-charts-cards-score-pie { position: absolute; bottom: 10%; }
+
+.dashboard-graphs-charts-cards-score-description { position: absolute; bottom: 25%; left: 20%; display: flex; flex-direction: column; align-items: center; }
+
+.dashboard-graphs-charts-cards-score-description-score { font-size: 26px; font-weight: 700; color: #282d30; }
+
+.dashboard-graphs-charts-cards-score-description-text { font-size: 15px; font-weight: 500; color: #74798c; width: 50%; display: flex; text-align: center; }
+
 .dashboard-graphs-keydata-card { display: flex; align-items: center; background-color: #fbfbfb; margin-bottom: 17px; padding: 25px 30px 25px 30px; border-radius: 5px; }
 
 .dashboard-graphs-keydata-card-image { margin-right: 20px; }

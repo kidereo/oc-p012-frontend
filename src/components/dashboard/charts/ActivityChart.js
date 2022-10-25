@@ -28,22 +28,26 @@ function ActivityChart({title, userDailyActivity}) {
                 }}
                 barGap={8}
             >
-                <CartesianGrid strokeDasharray="3 3" vertical={false}/>
-                <XAxis dataKey="label"
-                       tickMargin={15}
-                       tickLine={false}
-                       tick={{
-                           fontSize: 14,
-                           fontWeight: 500
-                       }}
-                       axisLine={{
-                           stroke: "rgba(222, 222, 222, 1)",
-                           strokeWidth: 1
-                       }}
-                       padding={{
-                           left: -20,
-                           right: -20
-                       }}
+                <CartesianGrid
+                    strokeDasharray="3 3"
+                    vertical={false}
+                />
+                <XAxis
+                    dataKey="label"
+                    tickMargin={15}
+                    tickLine={false}
+                    tick={{
+                        fontSize: 14,
+                        fontWeight: 500
+                    }}
+                    axisLine={{
+                        stroke: "rgba(222, 222, 222, 1)",
+                        strokeWidth: 1
+                    }}
+                    padding={{
+                        left: -20,
+                        right: -20
+                    }}
                 />
                 <YAxis
                     yAxisId="burn"
@@ -62,15 +66,16 @@ function ActivityChart({title, userDailyActivity}) {
                     tickMargin={20}
                     domain={[
                         "dataMin - 2",
-                        "dataMax + 2"
+                        "dataMax + 3"
                     ]}
                 />
-                <Tooltip content={<CustomisedTooltip/>}
-                         offset={50}
-                         cursor={{
-                             fill: "rgba(196, 196, 196, 0.5)",
-                             //width: 55,
-                         }}
+                <Tooltip
+                    content={<CustomisedTooltip/>}
+                    offset={50}
+                    cursor={{
+                        fill: "rgba(196, 196, 196, 0.5)",
+                        //width: 55,
+                    }}
                 />
                 <Legend
                     payload={[
@@ -93,17 +98,19 @@ function ActivityChart({title, userDailyActivity}) {
                         right: 20
                     }}
                 />
-                <Bar yAxisId="weight"
-                     dataKey="kilogram"
-                     fill="#282D30"
-                     radius={[3, 3, 0, 0]}
-                     barSize={7}
+                <Bar
+                    yAxisId="weight"
+                    dataKey="kilogram"
+                    fill="#282D30"
+                    radius={[3, 3, 0, 0]}
+                    barSize={7}
                 />
-                <Bar yAxisId="burn"
-                     dataKey="calories"
-                     fill="#E60000"
-                     radius={[3, 3, 0, 0]}
-                     barSize={7}
+                <Bar
+                    yAxisId="burn"
+                    dataKey="calories"
+                    fill="#E60000"
+                    radius={[3, 3, 0, 0]}
+                    barSize={7}
                 />
             </BarChart>
         </>

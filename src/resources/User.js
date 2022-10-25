@@ -8,14 +8,16 @@ export default class User {
      * @param proteinCount
      * @param carbohydrateCount
      * @param lipidCount
+     * @param score
      */
-    constructor(firstName, lastName, calorieCount, proteinCount, carbohydrateCount, lipidCount) {
+    constructor(firstName, lastName, calorieCount, proteinCount, carbohydrateCount, lipidCount, score) {
         this.name = firstName;
         this.surname = lastName;
         this.calories = calorieCount;
         this.proteins = proteinCount;
         this.carbs = carbohydrateCount;
         this.fats = lipidCount;
+        this.presentScore = score;
     }
 
     /**
@@ -45,5 +47,25 @@ export default class User {
 
     get lipidCount() {
         return this.fats;
+    }
+
+    get score() {
+        return this.presentScore
+    }
+
+    get percentageScore() {
+        return this.scoreCalculation();
+    }
+
+    /**
+     * Convert todayScore into array of actual/total percentage values.
+     *
+     * @returns {*[]}
+     */
+    scoreCalculation() {
+        return [
+            {key: "score", value: this.score * 100},
+            {key: "total", value: 100 - this.score * 100}
+        ]
     }
 }

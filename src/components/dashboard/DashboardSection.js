@@ -18,6 +18,8 @@ import IconFats from "../../assets/icon-fats.svg";
 import ActivityChart from "./charts/ActivityChart";
 import SessionLengthChart from "./charts/SessionLengthChart";
 import PerformanceChart from "./charts/PerformanceChart";
+import ScoreChart from "./charts/ScoreChart";
+import * as Constants from "../../resources/Constants";
 
 /**
  * Principal component for the Dashboard.js <section>.
@@ -65,6 +67,7 @@ function DashboardSection() {
         currentUserId?.keyData.proteinCount,
         currentUserId?.keyData.carbohydrateCount,
         currentUserId?.keyData.lipidCount,
+        currentUserId?.score ? currentUserId.score : currentUserId.todayScore
     );
 
     /**
@@ -82,7 +85,7 @@ function DashboardSection() {
                     <>
                         <div className="dashboard-greeting">
                             <DashboardGreeting name={currentUser.firstName}
-                                               greeting="Félicitation ! Vous avez explosé vos objectifs hier 👏"
+                                               greeting={Constants.GREETING_TEXT}
                             />
                         </div>
 
@@ -95,13 +98,16 @@ function DashboardSection() {
 
                                 </div>
                                 <div className="dashboard-graphs-charts-cards">
-                                    <SessionLengthChart title="Durée moyenne des sessions"
-                                                        userSessionLength={currentUserAverageSessionLength}
+                                    <SessionLengthChart
+                                        title="Durée moyenne des sessions"
+                                        userSessionLength={currentUserAverageSessionLength}
                                     />
-                                    <PerformanceChart userPerformance={currentUserPerformance}
+                                    <PerformanceChart
+                                        userPerformance={currentUserPerformance}
                                     />
-                                    <SessionLengthChart title="Durée moyenne des sessions"
-                                                        userSessionLength={currentUserAverageSessionLength}
+                                    <ScoreChart
+                                        title="Score"
+                                        userScore={currentUser.percentageScore}
                                     />
                                 </div>
                             </div>

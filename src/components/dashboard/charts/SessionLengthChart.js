@@ -28,26 +28,28 @@ export default function SessionLengthChart({title, userSessionLength}) {
                 }}
                 outerRadius="75%"
             >
-                <XAxis dataKey="label"
-                       stroke="rgba(255, 255, 255, 0.5)"
-                       tickMargin={10}
-                       tickLine={false}
-                       tick={{
-                           fontSize: 12,
-                           fontWeight: 500
-                       }}
-                       axisLine={false}
+                <XAxis
+                    dataKey="label"
+                    stroke="rgba(255, 255, 255, 0.5)"
+                    tickMargin={10}
+                    tickLine={false}
+                    tick={{
+                        fontSize: 12,
+                        fontWeight: 500
+                    }}
+                    axisLine={false}
                 />
                 <YAxis
                     domain={[0, "dataMax + 20"]}
                     hide={true}
                 />
-                <Tooltip content={<CustomisedTooltip/>}
-                         offset={10}
-                         cursor={{
-                             stroke: "rgba(255,255,255, 0.5)",
-                             strokeWidth: 0.5,
-                         }}
+                <Tooltip
+                    content={<CustomisedTooltip/>}
+                    offset={10}
+                    cursor={{
+                        stroke: "rgba(255,255,255, 0.5)",
+                        strokeWidth: 0.5,
+                    }}
                 />
                 <Line
                     type="monotone"

@@ -1,11 +1,10 @@
 import React from 'react';
-import {Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, LineChart} from 'recharts';
+import {Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis} from 'recharts';
 import Performance from "../../../resources/Performance";
 import * as PropTypes from 'prop-types';
 
-
 /**
- * Component for the performance chart
+ * Component for the performance chart.
  *
  * @param userPerformance
  * @returns {*}

@@ -1,5 +1,5 @@
 import React from "react";
-import {LineChart, Line, XAxis, YAxis, Tooltip} from 'recharts';
+import {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import SessionLength from "../../../resources/SessionLength";
 import * as PropTypes from 'prop-types';
 
@@ -16,55 +16,55 @@ export default function SessionLengthChart({title, userSessionLength}) {
     return (
         <div className="dashboard-graphs-charts-cards-session_length">
             <h2>{title}</h2>
-            <LineChart
-                width={150}
-                height={120}
-                data={currentUserSessionLength.retrieveSessionLength}
-                margin={{
-                    top: 5,
-                    right: 5,
-                    left: 25,
-                    bottom: 5,
-                }}
-                outerRadius="75%"
-            >
-                <XAxis
-                    dataKey="label"
-                    stroke="rgba(255, 255, 255, 0.5)"
-                    tickMargin={10}
-                    tickLine={false}
-                    tick={{
-                        fontSize: 12,
-                        fontWeight: 500
+            <ResponsiveContainer width="100%" height="70%">
+                <LineChart
+                    data={currentUserSessionLength.retrieveSessionLength}
+                    margin={{
+                        top: 5,
+                        right: 15,
+                        left: 15,
+                        bottom: 5,
                     }}
-                    axisLine={false}
-                />
-                <YAxis
-                    domain={[0, "dataMax + 20"]}
-                    hide={true}
-                />
-                <Tooltip
-                    content={<CustomisedTooltip/>}
-                    offset={10}
-                    cursor={{
-                        stroke: "rgba(255,255,255, 0.5)",
-                        strokeWidth: 0.5,
-                    }}
-                />
-                <Line
-                    type="monotone"
-                    dataKey="sessionLength"
-                    stroke="rgba(255, 255, 255, 0.5)"
-                    strokeWidth={2}
-                    dot={false}
-                    activeDot={{
-                        stroke: "rgba(255,255,255, 0.5)",
-                        strokeWidth: 3,
-                        r: 4,
-                        fill: "white"
-                    }}
-                />
-            </LineChart>
+                    outerRadius="75%"
+                >
+                    <XAxis
+                        dataKey="label"
+                        stroke="rgba(255, 255, 255, 0.5)"
+                        tickMargin={10}
+                        tickLine={false}
+                        tick={{
+                            fontSize: 12,
+                            fontWeight: 500
+                        }}
+                        axisLine={false}
+                    />
+                    <YAxis
+                        domain={[0, "dataMax + 20"]}
+                        hide={true}
+                    />
+                    <Tooltip
+                        content={<CustomisedTooltip/>}
+                        offset={10}
+                        cursor={{
+                            stroke: "rgba(255,255,255, 0.5)",
+                            strokeWidth: 0.5,
+                        }}
+                    />
+                    <Line
+                        type="monotone"
+                        dataKey="sessionLength"
+                        stroke="rgba(255, 255, 255, 0.5)"
+                        strokeWidth={2}
+                        dot={false}
+                        activeDot={{
+                            stroke: "rgba(255,255,255, 0.5)",
+                            strokeWidth: 3,
+                            r: 4,
+                            fill: "white"
+                        }}
+                    />
+                </LineChart>
+            </ResponsiveContainer>
         </div>
     )
 }

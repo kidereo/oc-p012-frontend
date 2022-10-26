@@ -1,6 +1,6 @@
 .body-container {
-  width: $breakpoint-desktop;
-  height: 780px;
+  min-width: $breakpoint-desktop;
+  min-height: 780px;
   margin: 0 auto 0 auto;
   background-color: white;
   border-radius: 5px;

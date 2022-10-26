@@ -1,4 +1,4 @@
-.body-container { width: 1024px; height: 780px; margin: 0 auto 0 auto; background-color: white; border-radius: 5px; filter: drop-shadow(0 0 6px darkgray); }
+.body-container { min-width: 1024px; min-height: 780px; margin: 0 auto 0 auto; background-color: white; border-radius: 5px; filter: drop-shadow(0 0 6px darkgray); }
 
 * { box-sizing: border-box; }
 
@@ -32,7 +32,7 @@ h1, h2, h3, p { margin: 0; }
 
 .horizontal-navigation-menu:hover { filter: drop-shadow(0 0 5px white); }
 
-.vertical-navigation { display: flex; flex-direction: column; background-color: #020203; width: 100px; height: 690px; justify-content: space-around; align-items: center; }
+.vertical-navigation { display: flex; flex-direction: column; background-color: #020203; width: 100px; height: 100%; justify-content: space-around; align-items: center; }
 
 .vertical-navigation-images { display: flex; flex-direction: column; }
 
@@ -64,7 +64,7 @@ h1, h2, h3, p { margin: 0; }
 
 .dashboard-greeting p { padding-top: 20px; font-weight: 400; font-size: 18px; }
 
-.dashboard-graphs { height: 450px; display: flex; flex-direction: row; justify-content: space-between; margin-top: 40px; }
+.dashboard-graphs { height: 100%; display: flex; flex-direction: row; justify-content: space-between; margin-top: 40px; }
 
 .dashboard-graphs-charts { height: 100%; width: 70%; }
 
@@ -74,25 +74,25 @@ h1, h2, h3, p { margin: 0; }
 
 .dashboard-graphs-charts-cards { margin-top: 20px; display: flex; justify-content: space-between; }
 
-.dashboard-graphs-charts-cards-session_length { border-radius: 5px; background-color: red; display: flex; flex-direction: column; width: 31%; height: 180px; }
+.dashboard-graphs-charts-cards-session_length { border-radius: 5px; background-color: red; display: flex; flex-direction: column; justify-content: space-around; width: 31%; aspect-ratio: 1/1; }
 
-.dashboard-graphs-charts-cards-session_length h2 { font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, 0.5); padding: 20px 50px 0 20px; }
+.dashboard-graphs-charts-cards-session_length h2 { font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, 0.5); padding: 10px 50px 0 20px; }
 
-.dashboard-graphs-charts-cards-performance { border-radius: 5px; background-color: black; display: flex; align-items: center; justify-content: center; width: 31%; height: 180px; }
+.dashboard-graphs-charts-cards-performance { border-radius: 5px; background-color: black; display: flex; align-items: center; justify-content: center; width: 31%; aspect-ratio: 1/1; }
 
-.dashboard-graphs-charts-cards-score { border-radius: 5px; background-color: #fbfbfb; width: 31%; height: 180px; position: relative; }
+.dashboard-graphs-charts-cards-score { border-radius: 5px; background-color: #fbfbfb; width: 31%; aspect-ratio: 1/1; display: flex; justify-content: center; align-items: center; position: relative; }
 
-.dashboard-graphs-charts-cards-score h2 { font-size: 15px; font-weight: 500; color: #20253a; padding: 20px 50px 0 20px; }
-
-.dashboard-graphs-charts-cards-score-pie { position: absolute; bottom: 10%; }
-
-.dashboard-graphs-charts-cards-score-description { position: absolute; bottom: 25%; left: 20%; display: flex; flex-direction: column; align-items: center; }
+.dashboard-graphs-charts-cards-score-description { position: absolute; display: flex; flex-direction: column; align-items: center; }
 
 .dashboard-graphs-charts-cards-score-description-score { font-size: 26px; font-weight: 700; color: #282d30; }
 
 .dashboard-graphs-charts-cards-score-description-text { font-size: 15px; font-weight: 500; color: #74798c; width: 50%; display: flex; text-align: center; }
 
-.dashboard-graphs-keydata-card { display: flex; align-items: center; background-color: #fbfbfb; margin-bottom: 17px; padding: 25px 30px 25px 30px; border-radius: 5px; }
+.dashboard-graphs-charts-cards .score-title { position: absolute; font-size: 15px; font-weight: 500; color: #20253a; padding: 20px 50px 0 20px; left: 53%; z-index: 1; }
+
+.dashboard-graphs-keydata { width: 25%; }
+
+.dashboard-graphs-keydata-card { display: flex; align-items: center; background-color: #fbfbfb; margin-bottom: 17px; padding: 25px 30px 25px 30px; border-radius: 5px; height: 22%; }
 
 .dashboard-graphs-keydata-card-image { margin-right: 20px; }
 

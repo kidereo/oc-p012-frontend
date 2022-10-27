@@ -8,7 +8,7 @@ import Logo from "../../assets/logo-sportsee.svg";
  * @returns {*}
  * @constructor
  */
-function HorizontalNavigation() {
+export default function HorizontalNavigation() {
     return (
         <nav className="horizontal-navigation">
             <NavLink to="#"><img src={Logo} alt="SportSee logo" className="horizontal-navigation-image"/></NavLink>
@@ -19,5 +19,3 @@ function HorizontalNavigation() {
         </nav>
     );
 }
-
-export default HorizontalNavigation;

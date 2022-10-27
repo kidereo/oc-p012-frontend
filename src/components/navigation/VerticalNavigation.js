@@ -12,7 +12,7 @@ import * as Constants from "../../resources/Constants";
  * @returns {*}
  * @constructor
  */
-function VerticalNavigation() {
+export default function VerticalNavigation() {
     return (
         <nav className="vertical-navigation">
             <div className="vertical-navigation-images">
@@ -25,5 +25,3 @@ function VerticalNavigation() {
         </nav>
     );
 }
-
-export default VerticalNavigation;

@@ -6,7 +6,7 @@ import React from "react";
  * @returns {*}
  * @constructor
  */
-function Loader() {
+export default function Loader() {
     return (
         <div className="loader">
             <h1 className="loader-code">102 Processing</h1>
@@ -15,5 +15,3 @@ function Loader() {
         </div>
     );
 }
-
-export default Loader;

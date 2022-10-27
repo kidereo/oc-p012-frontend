@@ -7,7 +7,6 @@ import {
     retrieveUserPerformance
 } from "../../data/api";
 import User from "../../resources/User";
-import Error from "../Error";
 import Loader from "../Loader";
 import DashboardGreeting from "./DashboardGreeting";
 import DashboardKeydataCard from "./DashboardKeydataCard";
@@ -27,9 +26,9 @@ import * as Constants from "../../resources/Constants";
  * @returns {*}
  * @constructor
  */
-function DashboardSection() {
+export default function DashboardSection() {
     let {id} = useParams();
-    let [currentUserId, setCurrentUserId] = useState({});
+    let [currentUserInfo, setCurrentUserInfo] = useState({});
     let [currentUserDailyActivity, setCurrentUserDailyActivity] = useState({});
     let [currentUserAverageSessionLength, setCurrentUserAverageSessionLength] = useState({});
     let [currentUserPerformance, setCurrentUserPerformance] = useState({});
@@ -41,11 +40,11 @@ function DashboardSection() {
      */
     useEffect(() => {
         async function accessAPI(id) {
-            let currentUserInfo = await retrieveUserInfo(id);
+            //let currentUserData = await retrieveUserInfo(id);
             let currentUserDailyActivity = await retrieveUserDailyActivity(id);
             let currentUserAverageSessionLength = await retrieveUserAverageSessionLength(id);
             let currentUserPerformance = await retrieveUserPerformance(id);
-            setCurrentUserId(currentUserInfo);
+            setCurrentUserInfo(await retrieveUserInfo(id));
             setCurrentUserDailyActivity(currentUserDailyActivity);
             setCurrentUserAverageSessionLength(currentUserAverageSessionLength);
             setCurrentUserPerformance(currentUserPerformance);
@@ -56,22 +55,14 @@ function DashboardSection() {
     }, [id]);
 
     /**
-     * Create a new user and map API data to them as per the User class.
+     * Create a new user and send the API data to the User class for treatment.
      *
      * @type {boolean|User}
      */
-    let currentUser = !isLoading && new User(
-        currentUserId?.userInfos.firstName,
-        currentUserId?.userInfos.lastName,
-        currentUserId?.keyData.calorieCount,
-        currentUserId?.keyData.proteinCount,
-        currentUserId?.keyData.carbohydrateCount,
-        currentUserId?.keyData.lipidCount,
-        currentUserId?.score ? currentUserId.score : currentUserId?.todayScore
-    );
+    let currentUser = !isLoading && new User(currentUserInfo);
 
     /**
-     * If there is no user found and accessAPI() is completed show the 404 error component.
+     * If there is no user found and accessAPI() is completed show the 404 error.
      */
     if (!currentUser.firstName && !isLoading) return <Navigate to="/error"/>;
 
@@ -88,7 +79,6 @@ function DashboardSection() {
                                                greeting={Constants.GREETING_TEXT}
                             />
                         </div>
-
                         <div className="dashboard-graphs">
                             <div className="dashboard-graphs-charts">
                                 <div className="dashboard-graphs-charts-activity">
@@ -140,5 +130,3 @@ function DashboardSection() {
         </div>
     );
 }
-
-export default DashboardSection;

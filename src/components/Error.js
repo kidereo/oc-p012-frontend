@@ -6,7 +6,7 @@ import React from "react";
  * @returns {*}
  * @constructor
  */
-function Error() {
+export default function Error() {
     return (
         <div className="error">
             <h1 className="error-code">404 Not Found</h1>
@@ -14,5 +14,3 @@ function Error() {
         </div>
     );
 }
-
-export default Error;

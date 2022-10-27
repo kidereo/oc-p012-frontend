@@ -2,22 +2,16 @@ export default class User {
     /**
      * Main class for the User model.
      *
-     * @param firstName
-     * @param lastName
-     * @param calorieCount
-     * @param proteinCount
-     * @param carbohydrateCount
-     * @param lipidCount
-     * @param score
+     * @param data
      */
-    constructor(firstName, lastName, calorieCount, proteinCount, carbohydrateCount, lipidCount, score) {
-        this.name = firstName;
-        this.surname = lastName;
-        this.calories = calorieCount;
-        this.proteins = proteinCount;
-        this.carbs = carbohydrateCount;
-        this.fats = lipidCount;
-        this.presentScore = score;
+    constructor(data) {
+        this.name = data?.userInfos.firstName;
+        this.surname = data?.userInfos.lastName;
+        this.calories = data?.keyData.calorieCount;
+        this.proteins = data?.keyData.proteinCount;
+        this.carbs = data?.keyData.carbohydrateCount;
+        this.fats = data?.keyData.lipidCount;
+        this.presentScore = data?.score ? data.score : data?.todayScore;
     }
 
     /**

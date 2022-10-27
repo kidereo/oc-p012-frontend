@@ -11,7 +11,7 @@ import * as PropTypes from 'prop-types';
  * @returns {*}
  * @constructor
  */
-function DashboardKeydataCard({image, count, unit, title}) {
+export default function DashboardKeydataCard({image, count, unit, title}) {
     return (
         <div className="dashboard-graphs-keydata-card">
             <img src={image} alt={`${title} count`}
@@ -35,5 +35,3 @@ DashboardKeydataCard.propTypes = {
     unit: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
 };
-
-export default DashboardKeydataCard;

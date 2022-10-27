@@ -11,7 +11,7 @@ import * as PropTypes from 'prop-types';
  * @returns {*}
  * @constructor
  */
-function ActivityChart({title, userDailyActivity}) {
+export default function ActivityChart({title, userDailyActivity}) {
     let currentUserActivity = new DailyActivity(userDailyActivity);
     return (
         <>
@@ -157,5 +157,3 @@ CustomisedTooltip.propTypes = {
     active: PropTypes.bool,
     payload: PropTypes.array
 };
-
-export default ActivityChart;

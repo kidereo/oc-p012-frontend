@@ -9,7 +9,7 @@ import * as PropTypes from 'prop-types';
  * @returns {*}
  * @constructor
  */
-function DashboardGreeting({name, greeting}) {
+export default function DashboardGreeting({name, greeting}) {
     return (
         <>
             <h1>Bonjour <span>{name}</span></h1>
@@ -27,5 +27,3 @@ DashboardGreeting.propTypes = {
     name: PropTypes.string.isRequired,
     greeting: PropTypes.string,
 };
-
-export default DashboardGreeting;

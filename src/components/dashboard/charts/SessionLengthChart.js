@@ -21,8 +21,8 @@ export default function SessionLengthChart({title, userSessionLength}) {
                     data={currentUserSessionLength.retrieveSessionLength}
                     margin={{
                         top: 5,
-                        right: 15,
-                        left: 15,
+                        right: 25,
+                        left: 25,
                         bottom: 5,
                     }}
                     outerRadius="75%"
@@ -44,10 +44,15 @@ export default function SessionLengthChart({title, userSessionLength}) {
                     />
                     <Tooltip
                         content={<CustomisedTooltip/>}
-                        offset={10}
+                        offset={15}
                         cursor={{
-                            stroke: "rgba(255,255,255, 0.5)",
-                            strokeWidth: 0.5,
+                            //stroke: "rgba(255,255,255, 0.5)",
+                            //strokeWidth: 0.5,
+                            stroke: "rgba(0, 0, 0, 0.1)",
+                            strokeWidth: 32,
+                        }}
+                        position={{
+                            y: 5
                         }}
                     />
                     <Line

@@ -13,7 +13,7 @@ import Error from "../components/Error";
  * @returns {*}
  * @constructor
  */
-function Dashboard() {
+export default function Dashboard() {
     return (
         <div className="body-container">
             <BrowserRouter>
@@ -35,5 +35,3 @@ function Dashboard() {
         </div>
     );
 }
-
-export default Dashboard;

@@ -5,20 +5,16 @@
 Développeur d'application - JavaScript React
 
 ## Main packages
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 Routing by [React Router](https://reactrouter.com/en/main).\
 Charts by [Recharts](https://recharts.org/en-US/).\
 Typechecking with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html).
 
-
 ## Prerequisites
-
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/).
 - [npm](https://www.npmjs.com/).
 
 ## Installation
-
 ### Backend
 1. Clone the backend repository with
 `git clone https://github.com/kidereo/oc-p012-backend.git`.
@@ -34,18 +30,23 @@ Typechecking with [PropTypes](https://reactjs.org/docs/typechecking-with-proptyp
 4. If all goes well, you should receive the console message `You can now view the project in the browser` and the dashboard will become available on `http://localhost:3000`. 
 5. If anything goes wrong, start again.
 
-## Endpoints
+## Use
+1. Once everything is up and running, navigate to `http://localhost:3000/`.
+2. You will see a 404 message. Do not be alarmed, this is by design as you have not selected a user yet.
+3. Currently just two users have been mocked with ids `12` and `18`. To access their respective dashboards navigate to either `http://localhost:3000/user/12` or `http://localhost:3000/user/18`.
+4. Finally, to make switching between users easier, icons on the left side menu have been assigned links as follows:
+    - The `yoga` icon will display dashboard for user `12`. 
+    - The `swimming` icon will display dashboard for user `18`.
+    - The `bike` and `weight` icons will display a 404 error page as their links refer to user ids which are not available on the backend.
 
+## Technical info
 ### Available endpoints
-This project includes four endpoints:
+This project calls on four endpoints:
 1. `http://localhost:3003/user/${userId}` - retrieves information from a user. This endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
 2. `http://localhost:3003/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
 3. `http://localhost:3003/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
 4. `http://localhost:3003/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
-### Warning
-Currently just two users have been mocked with ids `12` and `18`.
-
-### Examples of queries
+### Examples of inner queries
 - `http://localhost:3003/user/12/performance` - retrieves the performance of the user with id `12`.
-- `http://localhost:3003/user/18` - retrieves main information of the user with id `18`.
+- `http://localhost:3003/user/18/average-sessions` - retrieves data for the average session length graph of the user with id `18`.

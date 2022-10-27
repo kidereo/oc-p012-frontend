@@ -24,7 +24,7 @@ export default function ScoreChart({title, userScore}) {
                             startAngle={210}
                             endAngle={-210}
                             innerRadius="90%"
-                            outerRadius="110%"
+                            outerRadius="105%"
                             cornerRadius="50%"
                         >
                             <Cell

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom/dist/index";
+import {useParams, Navigate} from "react-router-dom/dist/index";
 import {
     retrieveUserInfo,
     retrieveUserDailyActivity,
@@ -67,13 +67,13 @@ function DashboardSection() {
         currentUserId?.keyData.proteinCount,
         currentUserId?.keyData.carbohydrateCount,
         currentUserId?.keyData.lipidCount,
-        currentUserId?.score ? currentUserId.score : currentUserId.todayScore
+        currentUserId?.score ? currentUserId.score : currentUserId?.todayScore
     );
 
     /**
      * If there is no user found and accessAPI() is completed show the 404 error component.
      */
-    if (!currentUser.firstName && !isLoading) return <Error/>;
+    if (!currentUser.firstName && !isLoading) return <Navigate to="/error"/>;
 
     /**
      * If accessAPI() returns a user display the dashboard content.

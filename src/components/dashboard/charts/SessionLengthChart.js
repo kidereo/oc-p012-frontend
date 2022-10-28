@@ -56,7 +56,7 @@ export default function SessionLengthChart({title, userSessionLength}) {
                         }}
                     />
                     <Line
-                        type="monotone"
+                        type="natural"
                         dataKey="sessionLength"
                         stroke="rgba(255, 255, 255, 0.5)"
                         strokeWidth={2}
@@ -85,8 +85,10 @@ export default function SessionLengthChart({title, userSessionLength}) {
 function CustomisedTooltip({active, payload}) {
     if (active) {
         return (
-            <div className="recharts-tooltip-wrapper-session_length">
-                <p>{payload[0].value + " min"}</p>
+            <div className="recharts-tooltip-wrapper-session-length">
+                <div className="recharts-tooltip-wrapper-session-length_payload">
+                    <p>{payload[0].value + " min"}</p>
+                </div>
             </div>
         );
     }

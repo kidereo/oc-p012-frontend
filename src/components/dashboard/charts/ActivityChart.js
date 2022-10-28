@@ -77,6 +77,9 @@ export default function ActivityChart({title, userDailyActivity}) {
                             fill: "rgba(196, 196, 196, 0.5)",
                             //width: 55,
                         }}
+                        position={{
+                            y: 5
+                        }}
                     />
                     <Legend
                         payload={[

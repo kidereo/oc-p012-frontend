@@ -49,7 +49,7 @@ export default function SessionLengthChart({title, userSessionLength}) {
                             //stroke: "rgba(255,255,255, 0.5)",
                             //strokeWidth: 0.5,
                             stroke: "rgba(0, 0, 0, 0.1)",
-                            strokeWidth: 32,
+                            strokeWidth: 35,
                         }}
                         position={{
                             y: 5

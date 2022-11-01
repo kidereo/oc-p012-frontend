@@ -67,7 +67,7 @@ export default function DashboardSection() {
     if (!currentUser.firstName && !isLoading) return <Navigate to="/error"/>;
 
     /**
-     * If accessAPI() returns a user display the dashboard content.
+     * If accessAPI() returns a user then display the dashboard content.
      */
     return (
         <div className="dashboard">

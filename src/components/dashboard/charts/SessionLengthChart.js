@@ -26,6 +26,18 @@ export default function SessionLengthChart({title, userSessionLength}) {
                         bottom: 5,
                     }}
                     outerRadius="75%"
+                    onMouseMove={(event) => {
+                        if (event.isTooltipActive) {
+                            let container = document.querySelector('.dashboard-graphs-charts-cards-session_length');
+                            let containerWidth = container.clientWidth;
+                            let mouseLocX = Math.round((event.activeCoordinate.x / containerWidth) * 100);
+                            container.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseLocX}%, rgba(225,0,0,1) ${mouseLocX}%, rgba(225,0,0,1) 100%)`;
+                        }
+                    }}
+                    onMouseOut={() => {
+                        let container = document.querySelector('.dashboard-graphs-charts-cards-session_length');
+                        container.style.background = "rgba(255, 0, 0, 1)";
+                    }}
                 >
                     <XAxis
                         dataKey="label"
@@ -46,10 +58,11 @@ export default function SessionLengthChart({title, userSessionLength}) {
                         content={<CustomisedTooltip/>}
                         offset={15}
                         cursor={{
+                            stroke: "rgba(255, 0, 0, 1)"
                             //stroke: "rgba(255,255,255, 0.5)",
-                            //strokeWidth: 0.5,
-                            stroke: "rgba(0, 0, 0, 0.1)",
-                            strokeWidth: 35,
+                            //strokeWidth: 1.5,
+                            //stroke: "rgba(0, 0, 0, 0.1)",
+                            //strokeWidth: 35,
                         }}
                         position={{
                             y: 5

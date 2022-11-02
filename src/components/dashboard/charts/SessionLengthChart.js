@@ -34,19 +34,20 @@ export default function SessionLengthChart({title, userSessionLength}) {
      *
      * @param hoveredDataPoint
      */
-    let [percentage, setPercentage] = useState(0);
+    let [linePercentage, setLinePercentage] = useState(0);
 
     function calculateLinePercentage(hoveredDataPoint) {
+        //console.log(hoveredDataPoint);
         if (hoveredDataPoint && hoveredDataPoint.activePayload) {
             let hoveredPoint = hoveredDataPoint.activePayload[0].payload.label;
             let index = chartData.findIndex(item => item.label === hoveredPoint);
             let variable = ((chartData.length - index - 1) * 100) / (chartData.length - 1);
-            setPercentage(100 - variable);
+            setLinePercentage(100 - variable);
         }
     }
 
     function resetLinePercentage() {
-        setPercentage(0);
+        setLinePercentage(0);
     }
 
     /**
@@ -84,8 +85,8 @@ export default function SessionLengthChart({title, userSessionLength}) {
                     outerRadius="75%"
                     onMouseMove={function (event) {
                         setBackground(event);
+                        calculateLinePercentage(event)
                     }}
-                    onMouseOver={calculateLinePercentage}
                     onMouseLeave={function () {
                         resetBackground();
                         resetLinePercentage();
@@ -133,8 +134,8 @@ export default function SessionLengthChart({title, userSessionLength}) {
                     <defs>
                         <linearGradient id="colourLine" x1="0%" y1="0" x2="100%" y2="0">
                             <stop offset="0%" stopColor="rgba(255, 255, 255, 0.5)"/>
-                            <stop offset={`${percentage}%`} stopColor="rgba(255, 255, 255, 0.4)"/>
-                            <stop offset={`${percentage}%`} stopColor="white"/>
+                            <stop offset={`${linePercentage}%`} stopColor="rgba(255, 255, 255, 0.4)"/>
+                            <stop offset={`${linePercentage}%`} stopColor="white"/>
                             <stop offset={`${100}%`} stopColor="white"/>
                         </linearGradient>
                     </defs>

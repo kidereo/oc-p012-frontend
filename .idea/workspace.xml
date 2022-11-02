@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7ca64d61-5d87-4c5b-9a07-85ec1e035fe7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,50 +16,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="33" column="150" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
+            <state relative-caret-position="495">
+              <caret line="139" column="41" lean-forward="true" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardSection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-343">
-              <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sass/03_base/_recharts.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sass/04_components/_dashboard.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -287,7 +247,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664889237759</updated>
-      <workItem from="1664889239034" duration="198404000" />
+      <workItem from="1664889239034" duration="214186000" />
     </task>
     <task id="LOCAL-00001" summary="Project structured and packages installed.">
       <created>1664900545171</created>
@@ -478,11 +438,25 @@
       <option name="project" value="LOCAL" />
       <updated>1667312722050</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added gradient background on the session length chart.">
+      <created>1667337348026</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667337348026</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added line gradient on the session length chart.">
+      <created>1667402906146</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1667402906146</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198404000" />
+    <option name="totallyTimeSpent" value="214186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1285" height="1283" extended-state="0" />
@@ -490,11 +464,11 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49935815" visible="true" weight="0.23732904" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49935815" visible="true" weight="0.23732904" />
       <window_info id="Structure" order="3" sideWeight="0.5006418" side_tool="true" weight="0.23732904" />
       <window_info anchor="bottom" id="TypeScript" weight="0.32960412" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32960412" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32960412" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32960412" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32960412" />
@@ -536,7 +510,8 @@
     <MESSAGE value="[1] Refactor User class. [2] Code cleanup." />
     <MESSAGE value="Minor code enhancements." />
     <MESSAGE value="Added gradient background on the session length chart." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gradient background on the session length chart." />
+    <MESSAGE value="Added line gradient on the session length chart." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added line gradient on the session length chart." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/reportWebVitals.js">
@@ -741,17 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ScoreChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-          <folding>
-            <element signature="e#679#1293#0" />
-            <element signature="e#1318#1727#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardGreeting.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -806,13 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
@@ -820,13 +777,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/Constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -844,27 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/SessionLength.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2972">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -899,20 +832,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ScoreChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+          <folding>
+            <element signature="e#679#1293#0" />
+            <element signature="e#1318#1727#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/ActivityChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardSection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-343">
-          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+        <state relative-caret-position="226">
+          <caret line="30" column="61" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="61" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/SessionLength.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/Constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/charts/SessionLengthChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="33" column="150" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
+        <state relative-caret-position="495">
+          <caret line="139" column="41" lean-forward="true" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

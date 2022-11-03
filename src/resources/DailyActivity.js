@@ -10,7 +10,6 @@ export default class DailyActivity {
                 /**
                  * Return just the day of the month (not the full date) with session data.
                  */
-                //label: session.day,
                 label: new Date(session.day).getDate().toString(),
                 ...session
             }

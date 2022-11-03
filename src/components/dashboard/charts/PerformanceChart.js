@@ -11,7 +11,7 @@ import * as PropTypes from 'prop-types';
  * @constructor
  */
 export default function PerformanceChart({userPerformance}) {
-    let currentUserPerformance = new Performance(userPerformance)
+    let currentUserPerformance = new Performance(userPerformance);
     return (
         <div className="dashboard-graphs-charts-cards-performance">
             <ResponsiveContainer width="100%" height="100%">

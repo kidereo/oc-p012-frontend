@@ -8,7 +8,7 @@ import * as Constants from "../resources/Constants";
  * @param id
  * @returns {Promise<*>}
  */
-async function retrieveUserInfo(id) {
+export async function retrieveUserInfo(id) {
     return await buildEndpoint(id, Constants.USER_INFO_ENDPOINT);
 }
 
@@ -19,7 +19,7 @@ async function retrieveUserInfo(id) {
  * @param id
  * @returns {Promise<*>}
  */
-async function retrieveUserDailyActivity(id) {
+export async function retrieveUserDailyActivity(id) {
     return await buildEndpoint(id, Constants.USER_DAILY_ACTIVITY_ENDPOINT);
 }
 
@@ -30,7 +30,7 @@ async function retrieveUserDailyActivity(id) {
  * @param id
  * @returns {Promise<*>}
  */
-async function retrieveUserAverageSessionLength(id) {
+export async function retrieveUserAverageSessionLength(id) {
     return await buildEndpoint(id, Constants.USER_AVERAGE_SESSION_LENGTH_ENDPOINT);
 }
 
@@ -41,7 +41,7 @@ async function retrieveUserAverageSessionLength(id) {
  * @param id
  * @returns {Promise<*>}
  */
-async function retrieveUserPerformance(id) {
+export async function retrieveUserPerformance(id) {
     return await buildEndpoint(id, Constants.USER_PERFORMANCE_ENDPOINT);
 }
 
@@ -57,12 +57,7 @@ async function buildEndpoint(id, endpoint) {
         const response = await fetch(`${Constants.BASE_URL}/${id}/${endpoint}`)
             .then(response => response.json());
         return response.data;
-        /*const response = await fetch(`${baseUrl}/${id}/${endpoint}`);
-        const dataDump = await response.json();
-        return dataDump.data;*/
     } catch (error) {
         console.log(error);
     }
 }
-
-export {retrieveUserInfo, retrieveUserDailyActivity, retrieveUserAverageSessionLength, retrieveUserPerformance};

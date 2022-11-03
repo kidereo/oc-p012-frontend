@@ -18,8 +18,6 @@ export default function ActivityChart({title, userDailyActivity}) {
             <h2>{title}</h2>
             <ResponsiveContainer width="100%" height={250}>
                 <BarChart
-                    /*width={600}
-                    height={250}*/
                     data={currentUserActivity.retrieveDailyActivity}
                     margin={{
                         top: 15,
@@ -74,8 +72,7 @@ export default function ActivityChart({title, userDailyActivity}) {
                         content={<CustomisedTooltip/>}
                         offset={50}
                         cursor={{
-                            fill: "rgba(196, 196, 196, 0.5)",
-                            //width: 55,
+                            fill: "rgba(196, 196, 196, 0.5)"
                         }}
                         position={{
                             y: 5

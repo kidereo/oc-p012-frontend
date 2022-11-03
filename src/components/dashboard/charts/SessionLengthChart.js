@@ -26,21 +26,18 @@ export default function SessionLengthChart({title, userSessionLength}) {
      */
 
     /**
-     * 1. Calculate percentage for the gradient colour
+     * Calculate percentage for the gradient colour
      * so that the line to the right of hovered datapoint can remain white
      * but the line to the left will become 50% opaque.
-     *
-     * 2. Reset line percentage back to 0.
      *
      * @param hoveredDataPoint
      */
     let [linePercentage, setLinePercentage] = useState(0);
 
-    function calculateLinePercentage(hoveredDataPoint) {
-        //console.log(hoveredDataPoint);
-        if (hoveredDataPoint && hoveredDataPoint.activePayload) {
-            let hoveredPoint = hoveredDataPoint.activePayload[0].payload.label;
-            let index = chartData.findIndex(item => item.label === hoveredPoint);
+    function calculateLinePercentage(event) {
+        if (event.activePayload) {
+            let eventPoint = event.activePayload[0].payload.label;
+            let index = chartData.findIndex(item => item.label === eventPoint);
             let variable = ((chartData.length - index - 1) * 100) / (chartData.length - 1);
             setLinePercentage(100 - variable);
         }
@@ -51,8 +48,7 @@ export default function SessionLengthChart({title, userSessionLength}) {
     }
 
     /**
-     * 1. Set chart's background to gray to the right of hovered datapoint.
-     * 2. Reset chart's background back to red.
+     * Set chart's background to gray to the right of hovered datapoint.
      *
      * @param event
      */
@@ -120,7 +116,6 @@ export default function SessionLengthChart({title, userSessionLength}) {
                     <Line
                         type="natural"
                         dataKey="sessionLength"
-                        //stroke="rgba(255, 255, 255, 0.5)"
                         stroke="url(#colourLine)"
                         strokeWidth={2}
                         dot={false}
@@ -146,7 +141,7 @@ export default function SessionLengthChart({title, userSessionLength}) {
 }
 
 /**
- * Internal function to allow easier tooltip customisation.
+ * Tooltip customisation.
  *
  * @param active
  * @param payload

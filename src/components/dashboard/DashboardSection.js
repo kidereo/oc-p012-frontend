@@ -40,11 +40,11 @@ export default function DashboardSection() {
      */
     useEffect(() => {
         async function accessAPI(id) {
-            //let currentUserData = await retrieveUserInfo(id);
+            let currentUserData = await retrieveUserInfo(id);
             let currentUserDailyActivity = await retrieveUserDailyActivity(id);
             let currentUserAverageSessionLength = await retrieveUserAverageSessionLength(id);
             let currentUserPerformance = await retrieveUserPerformance(id);
-            setCurrentUserInfo(await retrieveUserInfo(id));
+            setCurrentUserInfo(currentUserData);
             setCurrentUserDailyActivity(currentUserDailyActivity);
             setCurrentUserAverageSessionLength(currentUserAverageSessionLength);
             setCurrentUserPerformance(currentUserPerformance);

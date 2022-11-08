@@ -33,11 +33,14 @@ Typechecking with [PropTypes](https://reactjs.org/docs/typechecking-with-proptyp
 ## Use
 1. Once everything is up and running, navigate to `http://localhost:3000/`.
 2. You will see a 404 message. Do not be alarmed, this is by design as you have not selected a user yet.
-3. Currently just two users have been mocked with ids `12` and `18`. To access their respective dashboards navigate to either `http://localhost:3000/user/12` or `http://localhost:3000/user/18`.
-4. Finally, to make switching between users easier, icons on the left side menu have been assigned links as follows:
-    - The `yoga` icon will display dashboard for user `12`. 
-    - The `swimming` icon will display dashboard for user `18`.
-    - The `bike` and `weight` icons will display a 404 error page as their links refer to user ids which are not available on the backend.
+3. Currently just two users exist, with ids `12` and `18`. To access their dashboards through the backend API navigate to either `http://localhost:3000/user/12` or `http://localhost:3000/user/18`. Note their names - Karl and Cecilia.
+4. In addition, two users have been mocked locally in a `data.js` file. To access their dashboards navigate to either `http://localhost:3000/mock/12` or `http://localhost:3000/mock/18`. You should see stats for James and Teresa now.
+5. Finally, to make switching between the API sourced and locally mocked users easier, icons on the left side menu have been assigned links as follows:
+    - The `yoga` icon will display dashboard for API user `12` - Karl. 
+    - The `swimming` icon will display dashboard for API user `18` - Cecilia.
+    - The `bike` icon will display dashboard for mocked user `12` - James.
+    - The `weight` icon will display dashboard for mocked user `18` - Teresa.
+    - Any other id will display a 404 error page as the path would be referring to user ids which are not available on the backend or in the mock data file.
 
 ## Technical info
 ### Available endpoints

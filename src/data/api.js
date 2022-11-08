@@ -1,4 +1,5 @@
-import * as Constants from "../resources/Constants";
+import * as CONSTANTS from "../resources/Constants";
+import * as MOCK_DATA from "./data";
 
 /**
  * Retrieve information of a given user.
@@ -6,10 +7,11 @@ import * as Constants from "../resources/Constants";
  * the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
  *
  * @param id
+ * @param datasource
  * @returns {Promise<*>}
  */
-export async function retrieveUserInfo(id) {
-    return await buildEndpoint(id, Constants.USER_INFO_ENDPOINT);
+export async function retrieveUserInfo(id, datasource) {
+    return await buildEndpoint(id, datasource, CONSTANTS.USER_INFO_ENDPOINT);
 }
 
 /**
@@ -17,10 +19,11 @@ export async function retrieveUserInfo(id) {
  * This endpoint retrieves user sessions day by day with kilograms and calories.
  *
  * @param id
+ * @param datasource
  * @returns {Promise<*>}
  */
-export async function retrieveUserDailyActivity(id) {
-    return await buildEndpoint(id, Constants.USER_DAILY_ACTIVITY_ENDPOINT);
+export async function retrieveUserDailyActivity(id, datasource) {
+    return await buildEndpoint(id, datasource, CONSTANTS.USER_DAILY_ACTIVITY_ENDPOINT);
 }
 
 /**
@@ -28,10 +31,11 @@ export async function retrieveUserDailyActivity(id) {
  * This endpoint retrieves average session duration of a user per day.
  *
  * @param id
+ * @param datasource
  * @returns {Promise<*>}
  */
-export async function retrieveUserAverageSessionLength(id) {
-    return await buildEndpoint(id, Constants.USER_AVERAGE_SESSION_LENGTH_ENDPOINT);
+export async function retrieveUserAverageSessionLength(id, datasource) {
+    return await buildEndpoint(id, datasource, CONSTANTS.USER_AVERAGE_SESSION_LENGTH_ENDPOINT);
 }
 
 /**
@@ -39,25 +43,42 @@ export async function retrieveUserAverageSessionLength(id) {
  * This endpoint retrieves a user's performance (energy, endurance, etc).
  *
  * @param id
+ * @param datasource
  * @returns {Promise<*>}
  */
-export async function retrieveUserPerformance(id) {
-    return await buildEndpoint(id, Constants.USER_PERFORMANCE_ENDPOINT);
+export async function retrieveUserPerformance(id, datasource) {
+    return await buildEndpoint(id, datasource, CONSTANTS.USER_PERFORMANCE_ENDPOINT);
 }
 
 /**
  * Build up endpoint URL to retrieve data.
  *
  * @param id
+ * @param datasource
  * @param endpoint
  * @returns {Promise<*>}
  */
-async function buildEndpoint(id, endpoint) {
-    try {
-        const response = await fetch(`${Constants.BASE_URL}/${id}/${endpoint}`)
-            .then(response => response.json());
-        return response.data;
-    } catch (error) {
-        console.log(error);
+async function buildEndpoint(id, datasource, endpoint) {
+    if (datasource === CONSTANTS.API_PATH) {
+        try {
+            const response = await fetch(`${CONSTANTS.BASE_URL}/${datasource}/${id}/${endpoint}`)
+                .then(response => response.json());
+            return response.data;
+        } catch (error) {
+            console.log(error);
+        }
+    } else {
+        switch (endpoint) {
+            case CONSTANTS.USER_INFO_ENDPOINT:
+                return MOCK_DATA.USER_MAIN_DATA.find((user) => user.id === parseInt(id));
+            case CONSTANTS.USER_DAILY_ACTIVITY_ENDPOINT:
+                return MOCK_DATA.USER_ACTIVITY.find((user) => user.userId === parseInt(id));
+            case CONSTANTS.USER_AVERAGE_SESSION_LENGTH_ENDPOINT:
+                return MOCK_DATA.USER_AVERAGE_SESSIONS.find((user) => user.userId === parseInt(id));
+            case CONSTANTS.USER_PERFORMANCE_ENDPOINT:
+                return MOCK_DATA.USER_PERFORMANCE.find((user) => user.userId === parseInt(id));
+            default:
+                break;
+        }
     }
 }

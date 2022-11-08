@@ -26,7 +26,7 @@ export default function Dashboard() {
                     </aside>
                     <section>
                         <Routes>
-                            <Route path="/user/:id" element={<DashboardSection/>}/>
+                            <Route path="/:datasource/:id" element={<DashboardSection/>}/>
                             <Route path="*" element={<Error/>}/>
                         </Routes>
                     </section>

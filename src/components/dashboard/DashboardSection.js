@@ -18,7 +18,7 @@ import ActivityChart from "./charts/ActivityChart";
 import SessionLengthChart from "./charts/SessionLengthChart";
 import PerformanceChart from "./charts/PerformanceChart";
 import ScoreChart from "./charts/ScoreChart";
-import * as Constants from "../../resources/Constants";
+import * as CONSTANTS from "../../resources/Constants";
 
 /**
  * Principal component for the Dashboard.js <section>.
@@ -28,6 +28,7 @@ import * as Constants from "../../resources/Constants";
  */
 export default function DashboardSection() {
     let {id} = useParams();
+    let {datasource} = useParams();
     let [currentUserInfo, setCurrentUserInfo] = useState({});
     let [currentUserDailyActivity, setCurrentUserDailyActivity] = useState({});
     let [currentUserAverageSessionLength, setCurrentUserAverageSessionLength] = useState({});
@@ -39,11 +40,11 @@ export default function DashboardSection() {
      * Runs at reload and every change of the id prop.
      */
     useEffect(() => {
-        async function accessAPI(id) {
-            let currentUserData = await retrieveUserInfo(id);
-            let currentUserDailyActivity = await retrieveUserDailyActivity(id);
-            let currentUserAverageSessionLength = await retrieveUserAverageSessionLength(id);
-            let currentUserPerformance = await retrieveUserPerformance(id);
+        async function accessAPI(id, datasource) {
+            let currentUserData = await retrieveUserInfo(id, datasource);
+            let currentUserDailyActivity = await retrieveUserDailyActivity(id, datasource);
+            let currentUserAverageSessionLength = await retrieveUserAverageSessionLength(id, datasource);
+            let currentUserPerformance = await retrieveUserPerformance(id, datasource);
             setCurrentUserInfo(currentUserData);
             setCurrentUserDailyActivity(currentUserDailyActivity);
             setCurrentUserAverageSessionLength(currentUserAverageSessionLength);
@@ -51,8 +52,8 @@ export default function DashboardSection() {
             setLoading(false);
         }
 
-        accessAPI(id);
-    }, [id]);
+        accessAPI(id, datasource);
+    }, [id, datasource]);
 
     /**
      * Create a new user and send the API data to the User class for treatment.
@@ -76,7 +77,7 @@ export default function DashboardSection() {
                     <>
                         <div className="dashboard-greeting">
                             <DashboardGreeting name={currentUser.firstName}
-                                               greeting={Constants.GREETING_TEXT}
+                                               greeting={CONSTANTS.GREETING_TEXT}
                             />
                         </div>
                         <div className="dashboard-graphs">
